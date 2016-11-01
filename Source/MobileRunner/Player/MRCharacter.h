@@ -3,6 +3,7 @@
 #pragma once
 
 #include "GameFramework/Character.h"
+#include "SwipeComponent.h"
 #include "MRCharacter.generated.h"
 
 UCLASS()
@@ -29,6 +30,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float BaseRunningSpeed = 5.0f;
 
-	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UCameraComponent* Camera;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USpringArmComponent* SpringArm;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USwipeComponent* SwipeComponent;
+
+	void JumpLeft();
+	void JumpRight();
 	
 };
